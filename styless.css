@@ -1,0 +1,253 @@
+:root {
+  --bg: #eef3f9;
+  --bg-gradient: linear-gradient(135deg, #eef3f9, #dce4ef);
+  --card: #ffffff;
+  --accent: #2b4865;
+  --accent-2: #6da8d6;
+  --muted: #7b8794;
+  --success: #1e9b6e;
+  --danger: #dc3545;
+}
+
+/* Reset + Background */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg-gradient);
+  color: #253144;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px;
+}
+
+/* Container */
+.auth-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-card {
+  background: var(--card);
+  padding: 88px;
+  border-radius: 14px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  max-width: 1020px;
+  box-shadow: 0 8px 20px rgba(43, 72, 101, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.auth-card.wide {
+  max-width: 1500px;
+  width:1080px;
+}
+
+.auth-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(43, 72, 101, 0.18);
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 18px;
+  color: var(--accent);
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  background: #f2f5f9;
+  border: none;
+  color: var(--muted);
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.tab:hover {
+  background: #e2e8f0;
+}
+
+.tab.active {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Forms */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form input,
+.form select,
+.form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(43, 72, 101, 0.12);
+  background: #f9fbfd;
+  outline: none;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.form input:focus {
+  border-color: var(--accent-2);
+  background: #94cce8;
+  box-shadow: 0 0 0 3px rgba(109, 168, 214, 0.2);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Buttons */
+.btn {
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(43, 72, 101, 0.15);
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn.ghost:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn.danger {
+  background: var(--danger);
+}
+
+.btn.danger:hover {
+  background: #b72b39;
+}
+
+/* Notices */
+.notice {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.notice.error {
+  background: #ffe5e5;
+  color: var(--danger);
+}
+
+.notice.success {
+  background: #e6fbf1;
+  color: var(--success);
+}
+
+/* Dashboard */
+.user-dash {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.cards {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card-3d {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--accent);
+  width: 200px;
+  text-align: center;
+  transition: transform 0.25s, box-shadow 0.25s;
+  box-shadow: 0 6px 18px rgba(43, 72, 101, 0.12);
+}
+
+.card-3d:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(43, 72, 101, 0.2);
+}
+
+/* Tables */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.table th,
+.table td {
+  padding: 22px;
+  text-align: left;
+  border-bottom: 1px solid rgba(43, 72, 101, 0.12);
+}
+
+.table th {
+  background: #f0f4f8;
+  color: var(--accent);
+}
+
+.table tr:hover {
+  background: #f9fbfd;
+}
+
+/* File List */
+.file-list {
+  list-style: none;
+  margin-top: 12px;
+}
+
+.file-list li {
+  padding: 8px 0;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(43, 72, 101, 0.12);
+  color: var(--muted);
+}
+
+/* Grid Form */
+.grid-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}

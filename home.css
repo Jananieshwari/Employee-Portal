@@ -1,0 +1,131 @@
+/* src/pages/Home.css */
+
+/* Hero */
+.hero {
+  height: 60vh;
+  background: url("https://cdn.wallpapersafari.com/51/91/obkPHA.jpg") center/cover no-repeat;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(49, 36, 108);
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+}
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  animation: bounce 2s infinite;
+}
+
+/* About */
+.about {
+  display: flex;
+  padding: 50px;
+  gap: 40px;
+  align-items: center;
+  background: #a4cdf0;
+}
+
+.about:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(2, 13, 38, 0.3);
+  transition: transform 0.5s;
+  
+}
+.about img {
+  width: 450px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(2, 13, 38, 0.3);
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+.about img:hover {
+  transform: scale(1.05);
+  
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  justify-content:space-evenly;
+  gap: 40px;
+  padding: 50px;
+}
+.card {
+  background: rgb(149, 193, 235);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(54, 8, 8, 0.2);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(1, 16, 33, 0.3);
+}
+
+/* Leadership */
+.leadership {
+  text-align: center;
+  padding: 90px;
+ background: rgb(126, 183, 237);
+  border-radius: 20px;
+  margin: 40px;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+.leadership:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(1, 16, 33, 0.3);
+  transition: transform 0.5s;
+}
+/* Services */
+.services {
+  padding: 70px;
+  text-align: center;
+}
+.service-grid {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+.service-card {
+  background: linear-gradient(135deg, #5073b3, #415a77);
+  color: rgb(174, 198, 216);
+  padding: 50px;
+  border-radius: 20px;
+  width: 300px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  transition: transform 0.4s;
+}
+.service-card:hover {
+  transform: rotateY(10deg) scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background: #09305a;
+  color: rgb(207, 214, 221);
+  text-align:center;
+  padding: 90px;
+  width:1400px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}

@@ -1,0 +1,207 @@
+/* ✅ Main card (big wrapper) */
+.auth-card.wide {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 30px 40px;
+  background: #d3e1f4; /* mild blue background */
+  border-radius: 20px;
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+/* Title */
+h2 {
+  margin-bottom: 20px;
+  color: #222;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* ✅ Info/Notice */
+.notice {
+  margin: 15px auto;
+  padding: 10px 16px;
+  background: #eef6ff;
+  border: 1px solid #b3d4fc;
+  border-radius: 6px;
+  width: fit-content;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
+/* ✅ Accordion container */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* ✅ Each user card (inside main box) */
+.user-row {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.user-row:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 18px rgba(0,0,0,0.15);
+}
+
+/* ✅ User header */
+.user-head {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+}
+
+.user-head .muted {
+  font-size: 13px;
+  color: #666;
+  margin-top: 3px;
+  display: block;
+}
+
+/* ✅ User body */
+.user-body {
+  margin-top: 10px;
+  text-align: center;
+  
+}
+
+/* ✅ Section headings */
+.user-body h4 {
+  margin: 15px 0 10px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* ✅ Personal table */
+.personal-table {
+  width: 80%;
+  margin: 0 auto 15px auto; /* center align */
+}
+
+.personal-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+
+.personal-table .label {
+  font-weight: bold;
+  color: #444;
+  width: 35%;
+  text-align: right;
+}
+
+.personal-table .value {
+  text-align: left;
+  padding-left: 12px;
+  color: #333;
+}
+
+/* ✅ Documents list */
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 auto 12px auto;
+  width: fit-content;
+}
+
+ul li {
+  margin: 6px 0;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ✅ Buttons */
+.btn {
+  background: #6c8ef5; /* mild blue */
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background: #3d6df4; /* darker on hover */
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid #6c8ef5;
+  color: #6c8ef5;
+}
+
+.btn.ghost:hover {
+  background: #6c8ef5;
+  color: white;
+}
+
+.btn.small {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+/* ✅ Danger button */
+.btn.danger {
+  background: #f66a6a;
+}
+
+.btn.danger:hover {
+  background: #d94b4b;
+}
+
+/* ✅ Row of buttons */
+.row.gap {
+  display: flex;
+  justify-content: center; /* center buttons */
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+/* ✅ Muted text */
+.muted {
+  font-size: 13px;
+  color: #777;
+}
+/* Force each user-row (white card) to be centered and use full width */
+.user-row {
+  width: 100%;                /* take full width of parent */
+  max-width: 700px;           /* prevent too wide */
+  margin: 0 auto;             /* center horizontally */
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+/* Ensure table & content align properly inside card */
+.personal-table {
+  width: 100%;                /* stretch across card */
+  max-width: 600px;           /* limit width for readability */
+  margin: 0 auto 20px auto;   /* center in card */
+  border-collapse: collapse;
+}
+
+ul {
+  max-width: 600px;           /* keep list aligned */
+  margin: 0 auto 20px auto;
+  padding-left: 0;
+}

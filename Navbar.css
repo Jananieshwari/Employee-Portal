@@ -1,0 +1,151 @@
+/* Navbar.css */
+
+/* Main navbar wrapper */
+.navbar {
+  width: 100%;
+  background: linear-gradient(90deg, #cfd8e3, #aebdd4); /* gradient */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  position: fixed;   /* ✅ fixed to top of page */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 16px 40px; /* medium height */
+  display: flex;
+  justify-content: center;
+}
+
+/* Push page content below navbar */
+body {
+  margin: 0;
+  padding-top: 80px; /* ✅ adjust equal to navbar height */
+}
+
+/* Inner container */
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  width: 100%;
+}
+.nav-logo {
+  height: 60px;
+  width:60px;
+  margin-right: 5px;
+}
+
+/* Brand (Logo + Text) */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #243b55;
+}
+
+.brand-text strong {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.brand-text small {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  gap: 28px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2c3e50;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: #1a2a40;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+/* Actions (buttons on right) */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn {
+  background: linear-gradient(135deg, #4c6ef5, #364fc7);
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid #4c6ef5;
+  color: #4c6ef5;
+}
+
+.btn.ghost:hover {
+  background: #4c6ef5;
+  color: white;
+}
+
+/* Burger menu (hidden on desktop) */
+.burger {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Responsive mobile view */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-links.open {
+    display: flex;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #cfd8e3;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  }
+ 
+  .nav-logo {
+  height: 10px;
+  width:10px;
+  margin-right: 5px;
+}
+
+}
