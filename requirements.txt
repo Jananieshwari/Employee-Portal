@@ -5,3 +5,10 @@ Flask-Mail==0.9.1
 python-dotenv==1.0.1
 itsdangerous==2.1.2
 pymysql==1.1.0
+
+
+
+Flask-Cors
+
+
+gunicorn

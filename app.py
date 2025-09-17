@@ -507,4 +507,4 @@ def admin_reset_password(token):
 if __name__ == "__main__":
     setup()
     # debug=True prints tracebacks to console
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000)
